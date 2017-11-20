@@ -8,22 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		E27F0E2F1FC0E12700FD4064 /* ELAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E2E1FC0E12700FD4064 /* ELAppDelegate.swift */; };
-		E27F0E311FC0E12700FD4064 /* ELMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E301FC0E12700FD4064 /* ELMasterViewController.swift */; };
 		E27F0E331FC0E12700FD4064 /* ELDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E321FC0E12700FD4064 /* ELDetailViewController.swift */; };
 		E27F0E361FC0E12700FD4064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27F0E341FC0E12700FD4064 /* Main.storyboard */; };
 		E27F0E381FC0E12700FD4064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27F0E371FC0E12700FD4064 /* Assets.xcassets */; };
 		E27F0E3B1FC0E12700FD4064 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27F0E391FC0E12700FD4064 /* LaunchScreen.storyboard */; };
+		E27F0E441FC25C1100FD4064 /* ELFetchServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E431FC25C1100FD4064 /* ELFetchServices.swift */; };
+		E27F0E471FC2613700FD4064 /* ELCharacterProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E461FC2613700FD4064 /* ELCharacterProfile.swift */; };
+		E27F0E4A1FC2682600FD4064 /* ELListCollectionViewController+DelegateMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E491FC2682600FD4064 /* ELListCollectionViewController+DelegateMethods.swift */; };
+		E27F0E4C1FC2693E00FD4064 /* ELListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E4B1FC2693D00FD4064 /* ELListCollectionViewController.swift */; };
+		E27F0E4E1FC26C6600FD4064 /* ELCharacterProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E4D1FC26C6600FD4064 /* ELCharacterProfileCollectionViewCell.swift */; };
+		E27F0E501FC2871D00FD4064 /* ELNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E4F1FC2871D00FD4064 /* ELNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E27F0E2B1FC0E12700FD4064 /* CharCharGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharCharGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27F0E2E1FC0E12700FD4064 /* ELAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELAppDelegate.swift; sourceTree = "<group>"; };
-		E27F0E301FC0E12700FD4064 /* ELMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELMasterViewController.swift; sourceTree = "<group>"; };
 		E27F0E321FC0E12700FD4064 /* ELDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELDetailViewController.swift; sourceTree = "<group>"; };
 		E27F0E351FC0E12700FD4064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E27F0E371FC0E12700FD4064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E27F0E3A1FC0E12700FD4064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E27F0E3C1FC0E12700FD4064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E27F0E431FC25C1100FD4064 /* ELFetchServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELFetchServices.swift; sourceTree = "<group>"; };
+		E27F0E461FC2613700FD4064 /* ELCharacterProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELCharacterProfile.swift; sourceTree = "<group>"; };
+		E27F0E491FC2682600FD4064 /* ELListCollectionViewController+DelegateMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ELListCollectionViewController+DelegateMethods.swift"; sourceTree = "<group>"; };
+		E27F0E4B1FC2693D00FD4064 /* ELListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELListCollectionViewController.swift; sourceTree = "<group>"; };
+		E27F0E4D1FC26C6600FD4064 /* ELCharacterProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELCharacterProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		E27F0E4F1FC2871D00FD4064 /* ELNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +66,10 @@
 		E27F0E2D1FC0E12700FD4064 /* CharCharGo */ = {
 			isa = PBXGroup;
 			children = (
-				E27F0E421FC25AFA00FD4064 /* Networking */,
 				E27F0E2E1FC0E12700FD4064 /* ELAppDelegate.swift */,
-				E27F0E301FC0E12700FD4064 /* ELMasterViewController.swift */,
+				E27F0E451FC2610D00FD4064 /* Models */,
+				E27F0E421FC25AFA00FD4064 /* Networking */,
+				E27F0E481FC2662C00FD4064 /* ListViewController */,
 				E27F0E321FC0E12700FD4064 /* ELDetailViewController.swift */,
 				E27F0E341FC0E12700FD4064 /* Main.storyboard */,
 				E27F0E371FC0E12700FD4064 /* Assets.xcassets */,
@@ -71,8 +82,28 @@
 		E27F0E421FC25AFA00FD4064 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				E27F0E431FC25C1100FD4064 /* ELFetchServices.swift */,
+				E27F0E4F1FC2871D00FD4064 /* ELNetworkManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		E27F0E451FC2610D00FD4064 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E27F0E461FC2613700FD4064 /* ELCharacterProfile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E27F0E481FC2662C00FD4064 /* ListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E27F0E491FC2682600FD4064 /* ELListCollectionViewController+DelegateMethods.swift */,
+				E27F0E4B1FC2693D00FD4064 /* ELListCollectionViewController.swift */,
+				E27F0E4D1FC26C6600FD4064 /* ELCharacterProfileCollectionViewCell.swift */,
+			);
+			path = ListViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +178,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E27F0E4A1FC2682600FD4064 /* ELListCollectionViewController+DelegateMethods.swift in Sources */,
 				E27F0E331FC0E12700FD4064 /* ELDetailViewController.swift in Sources */,
-				E27F0E311FC0E12700FD4064 /* ELMasterViewController.swift in Sources */,
+				E27F0E471FC2613700FD4064 /* ELCharacterProfile.swift in Sources */,
 				E27F0E2F1FC0E12700FD4064 /* ELAppDelegate.swift in Sources */,
+				E27F0E4C1FC2693E00FD4064 /* ELListCollectionViewController.swift in Sources */,
+				E27F0E501FC2871D00FD4064 /* ELNetworkManager.swift in Sources */,
+				E27F0E441FC25C1100FD4064 /* ELFetchServices.swift in Sources */,
+				E27F0E4E1FC26C6600FD4064 /* ELCharacterProfileCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
