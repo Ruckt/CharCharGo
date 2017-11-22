@@ -1,2 +1,2 @@
 # CharCharGo
-Pinging duck duck go for some 
+Pinging duck duck go for some characters
