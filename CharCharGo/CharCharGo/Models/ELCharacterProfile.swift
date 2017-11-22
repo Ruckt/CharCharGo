@@ -8,11 +8,33 @@
 
 import Foundation
 
-
-struct ELCharcterProfile {
-    var iconUrl: String?
-    var firstURL: String?
-    var textDescription: String?
+struct ELRelatedTopics: Codable {
+    var RelatedTopics : ELCharacterProfileArray
 }
 
-typealias ELCharacterProfileArray = [ELCharcterProfile]
+struct ELCharacterProfile: Codable {
+    let firstURL: String
+    let description: String
+    let icon: Icon
+    
+    enum CodingKeys: String, CodingKey {
+        case firstURL = "FirstURL"
+        case description = "Text"
+        case icon = "Icon"
+    }
+    
+    struct Icon : Codable {
+        let Width: String
+        let Height: String
+        let iconURL: String
+        
+        enum CodingKeys: String, CodingKey {
+            case iconURL = "URL"
+            case Width
+            case Height
+        }
+    }
+}
+
+typealias ELCharacterProfileArray = [ELCharacterProfile]
+

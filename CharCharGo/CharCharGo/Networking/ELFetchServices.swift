@@ -44,42 +44,22 @@ class ELFetchServices {
             }
             
             do {
-                if let json = try JSONSerialization.jsonObject(with: responseData, options: []) as? [String: Any] {
-                    print("json here")
-                    print(json)
-                    completion(nil)
-                } else {
-                    print("Couldn't create an object from the JSON")
-                    completion(nil)
+                let decoded = try JSONDecoder().decode(ELRelatedTopics.self, from: responseData)
+                let characterProfiles = decoded.RelatedTopics
+                
+                for profile: ELCharacterProfile in characterProfiles {
+                    
+                    print("*******")
+                    print (profile)
                 }
+                completion(nil)
+                
             } catch {
-                print("Error trying to convert the data to JSON using JSONSerialization.jsonObject")
+                print("Error trying to convert the responseData to JSON using DeCodable")
                 completion(nil)
                 return
             }
         }
-
-//                let characterList = json.flatMap({ (dict) -> ELCharcterProfile? in
-//                    guard let albumId = dict["albumId"] as? Int,
-//                        let id = dict["id"] as? Int,
-//                        let title = dict["title"] as? String,
-//                        let url = dict["url"] as? String,
-//                        let thumbnailUrl = dict["thumbnailUrl"] as? String
-//                        else { return nil }
-//
-//
-//
-//                    let specs =  JPTypicodePhotoSpecs(albumId: albumId,
-//                                                      id: id,
-//                                                      title: title,
-//                                                      url:url.replacingOccurrences(of: "http://", with: "https://"),
-//                                                      thumbnailUrl: thumbnailUrl.replacingOccurrences(of: "http://", with: "https://"),
-//                                                      orderedSpot: count)
-//                    count += 1
-//
-//                    return specs
-//                })
-//                completion(characterList)
 
         task.resume()
     }
