@@ -17,6 +17,9 @@ struct ELCharacterProfile: Codable {
     let description: String
     let icon: Icon
     
+    let iconURL : String
+    var name : String = ""
+    
     enum CodingKeys: String, CodingKey {
         case firstURL = "FirstURL"
         case description = "Text"
@@ -26,12 +29,26 @@ struct ELCharacterProfile: Codable {
     struct Icon : Codable {
         let Width: String
         let Height: String
-        let iconURL: String
+        let url: String
         
         enum CodingKeys: String, CodingKey {
-            case iconURL = "URL"
+            case url = "URL"
             case Width
             case Height
+        }
+    }
+}
+
+extension ELCharacterProfile {
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        firstURL = try values.decode(String.self, forKey: .firstURL)
+        description = try values.decode(String.self, forKey: .description)
+        icon = try values.decode(Icon.self, forKey: .icon)
+        iconURL = icon.url
+        
+        if let range = description.range(of: " - ") {
+            name = String(description[(description.startIndex)..<range.lowerBound])
         }
     }
 }

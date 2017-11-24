@@ -46,13 +46,7 @@ class ELFetchServices {
             do {
                 let decoded = try JSONDecoder().decode(ELRelatedTopics.self, from: responseData)
                 let characterProfiles = decoded.RelatedTopics
-                
-                for profile: ELCharacterProfile in characterProfiles {
-                    
-                    print("*******")
-                    print (profile)
-                }
-                completion(nil)
+                completion(characterProfiles)
                 
             } catch {
                 print("Error trying to convert the responseData to JSON using DeCodable")
