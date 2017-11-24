@@ -18,6 +18,8 @@
 		E27F0E4C1FC2693E00FD4064 /* ELListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E4B1FC2693D00FD4064 /* ELListCollectionViewController.swift */; };
 		E27F0E4E1FC26C6600FD4064 /* ELCharacterProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E4D1FC26C6600FD4064 /* ELCharacterProfileCollectionViewCell.swift */; };
 		E27F0E501FC2871D00FD4064 /* ELNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E4F1FC2871D00FD4064 /* ELNetworkManager.swift */; };
+		E2A13F991FC88FE200780505 /* ELGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A13F981FC88FE200780505 /* ELGridFlowLayout.swift */; };
+		E2A13F9B1FC8A06000780505 /* ELListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A13F9A1FC8A06000780505 /* ELListFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		E27F0E4B1FC2693D00FD4064 /* ELListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELListCollectionViewController.swift; sourceTree = "<group>"; };
 		E27F0E4D1FC26C6600FD4064 /* ELCharacterProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELCharacterProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		E27F0E4F1FC2871D00FD4064 /* ELNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELNetworkManager.swift; sourceTree = "<group>"; };
+		E2A13F981FC88FE200780505 /* ELGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELGridFlowLayout.swift; sourceTree = "<group>"; };
+		E2A13F9A1FC8A06000780505 /* ELListFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELListFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				E27F0E491FC2682600FD4064 /* ELListCollectionViewController+DelegateMethods.swift */,
 				E27F0E4B1FC2693D00FD4064 /* ELListCollectionViewController.swift */,
 				E27F0E4D1FC26C6600FD4064 /* ELCharacterProfileCollectionViewCell.swift */,
+				E2A13F981FC88FE200780505 /* ELGridFlowLayout.swift */,
+				E2A13F9A1FC8A06000780505 /* ELListFlowLayout.swift */,
 			);
 			path = ListViewController;
 			sourceTree = "<group>";
@@ -180,10 +186,12 @@
 			files = (
 				E27F0E4A1FC2682600FD4064 /* ELListCollectionViewController+DelegateMethods.swift in Sources */,
 				E27F0E331FC0E12700FD4064 /* ELDetailViewController.swift in Sources */,
+				E2A13F9B1FC8A06000780505 /* ELListFlowLayout.swift in Sources */,
 				E27F0E471FC2613700FD4064 /* ELCharacterProfile.swift in Sources */,
 				E27F0E2F1FC0E12700FD4064 /* ELAppDelegate.swift in Sources */,
 				E27F0E4C1FC2693E00FD4064 /* ELListCollectionViewController.swift in Sources */,
 				E27F0E501FC2871D00FD4064 /* ELNetworkManager.swift in Sources */,
+				E2A13F991FC88FE200780505 /* ELGridFlowLayout.swift in Sources */,
 				E27F0E441FC25C1100FD4064 /* ELFetchServices.swift in Sources */,
 				E27F0E4E1FC26C6600FD4064 /* ELCharacterProfileCollectionViewCell.swift in Sources */,
 			);

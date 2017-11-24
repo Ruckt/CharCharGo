@@ -132,7 +132,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="WRh-7g-Pkg">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CharacterProfileCellID" id="WRh-7g-Pkg" customClass="ELCharacterProfileCollectionViewCell" customModule="CharCharGo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="120" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -152,6 +152,10 @@
                                         </label>
                                     </subviews>
                                 </view>
+                                <connections>
+                                    <outlet property="imageView" destination="kLB-2W-cCc" id="9A8-z1-20L"/>
+                                    <outlet property="nameLabel" destination="ZOo-Rp-6ys" id="RIl-Rw-NwP"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -159,7 +163,16 @@
                             <outlet property="delegate" destination="VAx-CL-nja" id="Gkp-Qr-fAE"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="dg4-j0-Xms"/>
+                    <navigationItem key="navigationItem" id="dg4-j0-Xms">
+                        <barButtonItem key="rightBarButtonItem" title="Grid" id="77X-e9-bnJ">
+                            <connections>
+                                <action selector="layoutChangeButtonPressed" destination="VAx-CL-nja" id="v9C-Kk-Qqr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="layoutChangeButton" destination="77X-e9-bnJ" id="sEj-g4-B5j"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5c-ZU-bjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

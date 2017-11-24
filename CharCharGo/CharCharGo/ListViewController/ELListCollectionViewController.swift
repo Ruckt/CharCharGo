@@ -11,8 +11,14 @@ import UIKit
 
 class ELListCollectionViewController: UICollectionViewController {
     
-    var detailViewController: DetailViewController? = nil
+    // UI properties
+    @IBOutlet var layoutChangeButton: UIBarButtonItem!
     
+    var detailViewController: DetailViewController? = nil
+    let gridFlowLayout = ELGridFlowLayout()
+    let listFlowLayout = ELListFlowLayout()
+    
+    // Data properties
     let networkManager = ELNetworkManager()
     var characterListArray : ELCharacterProfileArray = []
 
@@ -44,6 +50,8 @@ class ELListCollectionViewController: UICollectionViewController {
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
+        collectionView!.collectionViewLayout = gridFlowLayout
+        layoutChangeButton.title = "To List"
         initiateRequest()
     }
     
@@ -83,6 +91,27 @@ class ELListCollectionViewController: UICollectionViewController {
 //        let indexPath = IndexPath(row: 0, section: 0)
 //        //  tableView.insertRows(at: [indexPath], with: .automatic)
 //    }
+    
+    
+    // MARK: Action Functions
+    
+    @IBAction func layoutChangeButtonPressed() {
+        guard let collectionView = self.collectionView else {return}
+        
+        if collectionView.collectionViewLayout == gridFlowLayout {
+            UIView.animate(withDuration: 0.2) { () -> Void in
+                collectionView.collectionViewLayout.invalidateLayout()
+                collectionView.setCollectionViewLayout(self.listFlowLayout, animated: true)
+                self.layoutChangeButton.title = "To Grid"
+            }
+        } else {
+            UIView.animate(withDuration: 0.2) { () -> Void in
+                collectionView.collectionViewLayout.invalidateLayout()
+                collectionView.setCollectionViewLayout(self.gridFlowLayout, animated: true)
+                self.layoutChangeButton.title = "To List"
+            }
+        }
+    }
     
     // MARK: - Segues
     
