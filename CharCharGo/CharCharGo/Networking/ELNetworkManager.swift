@@ -12,16 +12,20 @@ class ELNetworkManager {
     
     func requestCharachers(completion: @escaping (ELCharacterProfileArray?) -> Void) {
         
-        ELFetchServices().fetchDuckDuckGoCharachtersService {[weak self] (charactersProfiles) in
+        ELFetchServices().fetchDuckDuckGoCharachtersService {[weak self] (characterProfiles) in
             
-            if let charactersProfiles = charactersProfiles {
+            if let characterProfiles = characterProfiles {
+                for profile: ELCharacterProfile in characterProfiles {
+                    print("*******" + profile.name)
+                }
+                
 //                self?.requestImageDataForPhotos(albumDetails, completion: { (dataArray) in
 //                    let sortQueue  = DispatchQueue(label: "sortQueue")
 //                    sortQueue.sync {
 //                        completion(dataArray.sorted{ $0.orderedSpot < $1.orderedSpot })
 //                    }
 //                })
-                completion(nil)
+                completion(characterProfiles)
             } else {
                 completion(nil)
             }

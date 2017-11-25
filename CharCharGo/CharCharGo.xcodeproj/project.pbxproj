@@ -20,6 +20,7 @@
 		E27F0E501FC2871D00FD4064 /* ELNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E4F1FC2871D00FD4064 /* ELNetworkManager.swift */; };
 		E2A13F991FC88FE200780505 /* ELGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A13F981FC88FE200780505 /* ELGridFlowLayout.swift */; };
 		E2A13F9B1FC8A06000780505 /* ELListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A13F9A1FC8A06000780505 /* ELListFlowLayout.swift */; };
+		E2A13F9D1FC8C71900780505 /* selfie.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A13F9C1FC8C71800780505 /* selfie.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		E27F0E4F1FC2871D00FD4064 /* ELNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELNetworkManager.swift; sourceTree = "<group>"; };
 		E2A13F981FC88FE200780505 /* ELGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELGridFlowLayout.swift; sourceTree = "<group>"; };
 		E2A13F9A1FC8A06000780505 /* ELListFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELListFlowLayout.swift; sourceTree = "<group>"; };
+		E2A13F9C1FC8C71800780505 /* selfie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = selfie.png; path = Assets.xcassets/selfie.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				E27F0E341FC0E12700FD4064 /* Main.storyboard */,
 				E27F0E371FC0E12700FD4064 /* Assets.xcassets */,
 				E27F0E391FC0E12700FD4064 /* LaunchScreen.storyboard */,
+				E2A13F9C1FC8C71800780505 /* selfie.png */,
 				E27F0E3C1FC0E12700FD4064 /* Info.plist */,
 			);
 			path = CharCharGo;
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E27F0E3B1FC0E12700FD4064 /* LaunchScreen.storyboard in Resources */,
+				E2A13F9D1FC8C71900780505 /* selfie.png in Resources */,
 				E27F0E381FC0E12700FD4064 /* Assets.xcassets in Resources */,
 				E27F0E361FC0E12700FD4064 /* Main.storyboard in Resources */,
 			);

@@ -20,26 +20,27 @@ class ELListCollectionViewController: UICollectionViewController {
     
     // Data properties
     let networkManager = ELNetworkManager()
-    var characterListArray : ELCharacterProfileArray = []
+    var characterProfileArray : ELCharacterProfileArray = []
 
     lazy var activityIndicator : UIActivityIndicatorView = {
         
         var activityIndicator = UIActivityIndicatorView()
         activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
         activityIndicator.color = UIColor.blue
-        if let viewWidth = self.collectionView?.frame.size.width,
-            let yCoordinate = self.collectionView?.frame.origin.y {
-            activityIndicator.frame = CGRect(x: (viewWidth/2 - 25),
-                                             y: yCoordinate + 80,
-                                             width: 50.0,
-                                             height: 50.0)
-        }
+        
+        let screenSize: CGRect = UIScreen.main.bounds
+        
+        activityIndicator.frame = CGRect(x: screenSize.width/2 - 25,
+                                         y: screenSize.height/2 - 100,
+                                         width: 50.0,
+                                         height: 50.0)
         
         return activityIndicator
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view, typically from a nib.
         navigationItem.leftBarButtonItem = editButtonItem
         
@@ -52,6 +53,7 @@ class ELListCollectionViewController: UICollectionViewController {
         
         collectionView!.collectionViewLayout = gridFlowLayout
         layoutChangeButton.title = "To List"
+        
         initiateRequest()
     }
     
@@ -61,37 +63,25 @@ class ELListCollectionViewController: UICollectionViewController {
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
     func initiateRequest () {
+        self.view.addSubview(activityIndicator)
         activityIndicator.startAnimating()
 
-        networkManager.requestCharachers {  [weak self] (characterList) in
+        networkManager.requestCharachers {  [weak self] (characterProfiles) in
+                if let characterProfiles = characterProfiles {
+                    self?.characterProfileArray = characterProfiles
+                }
+            
             DispatchQueue.main.async { () in
-                    if self?.activityIndicator.isAnimating == true {
-                        self?.activityIndicator.stopAnimating()
-                        self?.activityIndicator.removeFromSuperview()
-                    }
+                if self?.activityIndicator.isAnimating == true {
+                    self?.activityIndicator.stopAnimating()
+                    self?.activityIndicator.removeFromSuperview()
                 }
                 
-                if let characterList = characterList {
-                    self?.characterListArray = characterList
-                }
+                self?.collectionView?.reloadData()
+            }
             }
     }
-    
-    
-//    @objc
-//    func insertNewObject(_ sender: Any) {
-//        objects.insert(NSDate(), at: 0)
-//        let indexPath = IndexPath(row: 0, section: 0)
-//        //  tableView.insertRows(at: [indexPath], with: .automatic)
-//    }
-    
     
     // MARK: Action Functions
     

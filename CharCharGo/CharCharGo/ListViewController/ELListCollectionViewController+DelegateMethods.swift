@@ -16,7 +16,7 @@ extension ELListCollectionViewController: UICollectionViewDelegateFlowLayout {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.characterListArray.count
+        return self.characterProfileArray.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -28,7 +28,14 @@ extension ELListCollectionViewController: UICollectionViewDelegateFlowLayout {
                 return UICollectionViewCell.init()
         }
         
+        let profile : ELCharacterProfile = self.characterProfileArray[indexPath.row]
+        
+        let name = profile.name
+        
+        cell.configureWithProfile(name, nil)
+        
 //        let specs = self.thumbnailsArray[indexPath.row % (self.thumbnailsArray.count - 1)]
+        
 //
 //        if let image = specs.image {
 //            cell.configureWithImage(image, CGFloat(self.randomPadding))

@@ -17,29 +17,22 @@ class ELCharacterProfileCollectionViewCell: UICollectionViewCell {
 //    @IBOutlet var topPadding: NSLayoutConstraint!
 //    @IBOutlet var bottomPadding: NSLayoutConstraint!
     
-    var universalPadding : CGFloat = 0.0
-    
     static let kCellIdentifier = "CharacterProfileCellID"
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        
-//        imageView.image = nil
-//        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = nil
+        nameLabel.text = ""
     }
     
-    func configureWithImage(_ image: UIImage?, _ padding: CGFloat) {
+    func configureWithProfile(_ name: String, _ image: UIImage?) {
         
-        universalPadding = padding
-        //        leftPadding.constant = padding
-        //        rightPadding.constant = padding
-        // bottomPadding.constant = padding
-        //topPadding.constant = padding
-  //      setPadding()
-        
-        
+        self.nameLabel.text = name
+
         if let image = image {
             imageView.image = image
+        } else {
+            imageView.image = UIImage(named: "selfie.png")
         }
     }
     

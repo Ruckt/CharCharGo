@@ -22,9 +22,6 @@ class ELFetchServices {
         }
         
         let urlRequest = URLRequest(url: url)
-        //urlRequest.httpMethod = "GET"
-        
-        //let config = URLSessionConfiguration.default
         let session = URLSession.shared
         
         print(urlRequest)
@@ -38,7 +35,7 @@ class ELFetchServices {
             }
             
             guard let responseData = data else {
-                print("Error: did not receive data")
+                print("Error: did not receive good data")
                 completion(nil)
                 return
             }
@@ -54,7 +51,6 @@ class ELFetchServices {
                 return
             }
         }
-
         task.resume()
     }
     

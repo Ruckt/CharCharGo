@@ -139,19 +139,28 @@
                                     <rect key="frame" x="0.0" y="0.0" width="120" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kLB-2W-cCc">
-                                            <rect key="frame" x="13" y="20" width="47" height="48"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kLB-2W-cCc">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="89"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOo-Rp-6ys">
-                                            <rect key="frame" x="70" y="34" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOo-Rp-6ys">
+                                            <rect key="frame" x="39" y="34" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="spY-Ak-zYS"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="kLB-2W-cCc" firstAttribute="leading" secondItem="WRh-7g-Pkg" secondAttribute="leading" id="312-Nz-3t3"/>
+                                    <constraint firstAttribute="trailing" secondItem="kLB-2W-cCc" secondAttribute="trailing" id="3yv-Zj-4QW"/>
+                                    <constraint firstAttribute="bottom" secondItem="kLB-2W-cCc" secondAttribute="bottom" id="OVw-Ok-vq1"/>
+                                    <constraint firstItem="ZOo-Rp-6ys" firstAttribute="centerY" secondItem="WRh-7g-Pkg" secondAttribute="centerY" id="PI5-Fy-q5X"/>
+                                    <constraint firstItem="ZOo-Rp-6ys" firstAttribute="centerX" secondItem="WRh-7g-Pkg" secondAttribute="centerX" id="W90-k8-zgs"/>
+                                    <constraint firstItem="kLB-2W-cCc" firstAttribute="top" secondItem="WRh-7g-Pkg" secondAttribute="top" id="lvJ-SM-CUj"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="kLB-2W-cCc" id="9A8-z1-20L"/>
                                     <outlet property="nameLabel" destination="ZOo-Rp-6ys" id="RIl-Rw-NwP"/>
