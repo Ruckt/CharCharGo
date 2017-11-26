@@ -21,7 +21,7 @@ class ELListCollectionViewController: UICollectionViewController {
     
     // Data properties
     let networkManager = ELNetworkManager()
-    var characterProfileArray : ELCharacterProfileArray = []
+    var characterProfileWithImagesArray : ELCharacterProfilelPlusImageDataArray = []
 
     lazy var activityIndicator : UIActivityIndicatorView = {
         
@@ -70,7 +70,7 @@ class ELListCollectionViewController: UICollectionViewController {
 
         networkManager.requestCharachers {  [weak self] (characterProfiles) in
                 if let characterProfiles = characterProfiles {
-                    self?.characterProfileArray = characterProfiles
+                    self?.characterProfileWithImagesArray = characterProfiles
                 }
             
             DispatchQueue.main.async { () in

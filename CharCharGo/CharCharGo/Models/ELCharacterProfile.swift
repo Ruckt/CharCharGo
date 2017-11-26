@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct ELRelatedTopics: Codable {
     var RelatedTopics : ELCharacterProfileArray
@@ -54,4 +55,12 @@ extension ELCharacterProfile {
 }
 
 typealias ELCharacterProfileArray = [ELCharacterProfile]
+
+struct ELCharacterProfilelPlusImageData {
+    var profile: ELCharacterProfile
+    var image: UIImage?
+}
+
+typealias ELCharacterProfilelPlusImageDataArray = [ELCharacterProfilelPlusImageData]
+
 

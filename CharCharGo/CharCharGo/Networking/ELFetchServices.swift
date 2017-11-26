@@ -11,11 +11,9 @@ import UIKit
 
 class ELFetchServices {
     
-    static let kSimpsonCharacterURL = "https://api.duckduckgo.com/?q=simpsons+characters&format=json"
-    
     func fetchDuckDuckGoCharachtersService(completion: @escaping (ELCharacterProfileArray?) -> Void) {
         
-        guard let url = URL(string: ELFetchServices.kSimpsonCharacterURL) else {
+        guard let url = URL(string: ELNetworkConstants.kSimpsonCharacterURL) else {
             print("Error: cannot create URL")
             completion(nil)
             return
@@ -54,31 +52,30 @@ class ELFetchServices {
         task.resume()
     }
     
-//    func fetchImageDataService(_ url: URL, completion: @escaping (UIImage?) -> Void) {
-//
-//        let session = URLSession(configuration: .default)
-//        let task = session.dataTask(with: url) { (data, response, error) in
-//
-//            if let error = error {
-//                print("Error downloading image: \(error)")
-//                completion(nil)
-//            } else {
-//                guard (response as? HTTPURLResponse) != nil
-//                    else {
-//                        print("No response on image download")
-//                        completion(nil)
-//                        return
-//                }
-//
-//                if let data = data,
-//                    let image = UIImage(data: data) {
-//                    completion(image)
-//                } else {
-//                    completion(nil)
-//                }
-//            }
-//        }
-//        task.resume()
-//    }
-    
+    func fetchImageDataService(_ url: URL, completion: @escaping (UIImage?) -> Void) {
+
+        let session = URLSession(configuration: .default)
+        let task = session.dataTask(with: url) { (data, response, error) in
+
+            if let error = error {
+                print("Error downloading image: \(error)")
+                completion(nil)
+            } else {
+                guard (response as? HTTPURLResponse) != nil
+                    else {
+                        print("No response on image download")
+                        completion(nil)
+                        return
+                }
+
+                if let data = data,
+                    let image = UIImage(data: data) {
+                    completion(image)
+                } else {
+                    completion(nil)
+                }
+            }
+        }
+        task.resume()
+    }
 }
