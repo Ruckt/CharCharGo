@@ -11,13 +11,13 @@ import UIKit
 
 class ELCharacterProfileCollectionViewCell: UICollectionViewCell {
     
+    static let kCellIdentifier = "CharacterProfileCellID"
+    
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
-//    @IBOutlet var rightPadding: NSLayoutConstraint!
-//    @IBOutlet var topPadding: NSLayoutConstraint!
-//    @IBOutlet var bottomPadding: NSLayoutConstraint!
     
-    static let kCellIdentifier = "CharacterProfileCellID"
+    @objc weak var collectionVC: ELListCollectionViewController?
+    var observation: NSKeyValueObservation?
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -25,24 +25,27 @@ class ELCharacterProfileCollectionViewCell: UICollectionViewCell {
         nameLabel.text = ""
     }
     
-    func configureWithProfile(_ name: String, _ image: UIImage?) {
+    func configureWithProfile(_ name: String, _ image: UIImage?, collectionVC: ELListCollectionViewController?) {
         
         self.nameLabel.text = name
+        self.collectionVC = collectionVC
 
         if let image = image {
             imageView.image = image
         } else {
             imageView.image = UIImage(named: "selfie.png")
         }
-    }
-    
-//    func setPadding() {
-//        leftPadding.constant = universalPadding
-//        rightPadding.constant = universalPadding
-//    }
-//
-    override func layoutIfNeeded() {
-        super.layoutIfNeeded()
-    //    setPadding()
+        
+        if let isGridLayout = self.collectionVC?.isGridLayout {
+            self.nameLabel.isHidden = isGridLayout
+            self.imageView.isHidden = !isGridLayout
+        }
+        
+        observation = self.collectionVC?.observe(\.isGridLayout) { object, change in
+            if let isGridLayout = self.collectionVC?.isGridLayout {
+                self.nameLabel.isHidden = isGridLayout
+                self.imageView.isHidden = !isGridLayout
+            }
+        }
     }
 }

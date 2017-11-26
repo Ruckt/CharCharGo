@@ -32,7 +32,7 @@ extension ELListCollectionViewController: UICollectionViewDelegateFlowLayout {
         
         let name = profile.name
         
-        cell.configureWithProfile(name, nil)
+        cell.configureWithProfile(name, nil, collectionVC: self)
         
 //        let specs = self.thumbnailsArray[indexPath.row % (self.thumbnailsArray.count - 1)]
         
@@ -46,22 +46,4 @@ extension ELListCollectionViewController: UICollectionViewDelegateFlowLayout {
         
         return cell
     }
-    
-    // MARK: UICollectionViewDelegateFlowLayout
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let size = self.randomCellSize
-//        return CGSize(width: size, height: 64);
 }
-
-
-
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//
-//        let object = objects[indexPath.row] as! NSDate
-//        cell.textLabel!.text = object.description
-//        return cell
-//    }
-//
-

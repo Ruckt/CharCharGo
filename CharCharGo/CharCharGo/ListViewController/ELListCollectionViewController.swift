@@ -17,6 +17,7 @@ class ELListCollectionViewController: UICollectionViewController {
     var detailViewController: DetailViewController? = nil
     let gridFlowLayout = ELGridFlowLayout()
     let listFlowLayout = ELListFlowLayout()
+    @objc dynamic var isGridLayout: Bool = true
     
     // Data properties
     let networkManager = ELNetworkManager()
@@ -80,13 +81,15 @@ class ELListCollectionViewController: UICollectionViewController {
                 
                 self?.collectionView?.reloadData()
             }
-            }
+        }
     }
     
     // MARK: Action Functions
     
     @IBAction func layoutChangeButtonPressed() {
         guard let collectionView = self.collectionView else {return}
+        
+        self.isGridLayout = !self.isGridLayout
         
         if collectionView.collectionViewLayout == gridFlowLayout {
             UIView.animate(withDuration: 0.2) { () -> Void in
