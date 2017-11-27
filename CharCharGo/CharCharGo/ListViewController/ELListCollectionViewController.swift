@@ -42,7 +42,7 @@ class ELListCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Simpsons Character Viewer"
+        self.title = ELCharCharGoConstants.kAPP_TITLE
         
         if let split = splitViewController {
             let controllers = split.viewControllers

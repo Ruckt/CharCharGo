@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2548DC81FCBE3C300D265BF /* ELCharCharGoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A13F9F1FC93C6C00780505 /* ELCharCharGoConstants.swift */; };
+		E2548DC91FCBE3C300D265BF /* ELListCollectionViewController+DelegateMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E491FC2682600FD4064 /* ELListCollectionViewController+DelegateMethods.swift */; };
+		E2548DCA1FCBE3C300D265BF /* ELCharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E321FC0E12700FD4064 /* ELCharacterDetailViewController.swift */; };
+		E2548DCB1FCBE3C300D265BF /* ELListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A13F9A1FC8A06000780505 /* ELListFlowLayout.swift */; };
+		E2548DCC1FCBE3C300D265BF /* ELCharacterProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E461FC2613700FD4064 /* ELCharacterProfile.swift */; };
+		E2548DCD1FCBE3C300D265BF /* ELAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E2E1FC0E12700FD4064 /* ELAppDelegate.swift */; };
+		E2548DCE1FCBE3C300D265BF /* ELListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E4B1FC2693D00FD4064 /* ELListCollectionViewController.swift */; };
+		E2548DCF1FCBE3C300D265BF /* ELNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E4F1FC2871D00FD4064 /* ELNetworkManager.swift */; };
+		E2548DD01FCBE3C300D265BF /* ELGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A13F981FC88FE200780505 /* ELGridFlowLayout.swift */; };
+		E2548DD11FCBE3C300D265BF /* ELFetchServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E431FC25C1100FD4064 /* ELFetchServices.swift */; };
+		E2548DD21FCBE3C300D265BF /* ELCharacterProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E4D1FC26C6600FD4064 /* ELCharacterProfileCollectionViewCell.swift */; };
+		E2548DD51FCBE3C300D265BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27F0E391FC0E12700FD4064 /* LaunchScreen.storyboard */; };
+		E2548DD61FCBE3C300D265BF /* selfie.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A13F9C1FC8C71800780505 /* selfie.png */; };
+		E2548DD71FCBE3C300D265BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27F0E371FC0E12700FD4064 /* Assets.xcassets */; };
+		E2548DD81FCBE3C300D265BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27F0E341FC0E12700FD4064 /* Main.storyboard */; };
 		E27F0E2F1FC0E12700FD4064 /* ELAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E2E1FC0E12700FD4064 /* ELAppDelegate.swift */; };
 		E27F0E331FC0E12700FD4064 /* ELCharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E321FC0E12700FD4064 /* ELCharacterDetailViewController.swift */; };
 		E27F0E361FC0E12700FD4064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27F0E341FC0E12700FD4064 /* Main.storyboard */; };
@@ -21,17 +36,19 @@
 		E2A13F991FC88FE200780505 /* ELGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A13F981FC88FE200780505 /* ELGridFlowLayout.swift */; };
 		E2A13F9B1FC8A06000780505 /* ELListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A13F9A1FC8A06000780505 /* ELListFlowLayout.swift */; };
 		E2A13F9D1FC8C71900780505 /* selfie.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A13F9C1FC8C71800780505 /* selfie.png */; };
-		E2A13FA01FC93C6C00780505 /* ELSimpsonsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A13F9F1FC93C6C00780505 /* ELSimpsonsConstants.swift */; };
+		E2A13FA01FC93C6C00780505 /* ELCharCharGoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A13F9F1FC93C6C00780505 /* ELCharCharGoConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E27F0E2B1FC0E12700FD4064 /* CharCharGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharCharGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2548DDC1FCBE3C300D265BF /* SeinfeldCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeinfeldCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2548DDD1FCBE3C300D265BF /* CharCharSeinfeldInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = CharCharSeinfeldInfo.plist; path = /Users/edan/Documents/Developer/CharCharGo/CharCharGo/CharCharGo/CharCharSeinfeldInfo.plist; sourceTree = "<absolute>"; };
+		E27F0E2B1FC0E12700FD4064 /* SimpsonsCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpsonsCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27F0E2E1FC0E12700FD4064 /* ELAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELAppDelegate.swift; sourceTree = "<group>"; };
 		E27F0E321FC0E12700FD4064 /* ELCharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELCharacterDetailViewController.swift; sourceTree = "<group>"; };
 		E27F0E351FC0E12700FD4064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E27F0E371FC0E12700FD4064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E27F0E3A1FC0E12700FD4064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E27F0E3C1FC0E12700FD4064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E27F0E3C1FC0E12700FD4064 /* CharCharSimpsonsInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CharCharSimpsonsInfo.plist; sourceTree = "<group>"; };
 		E27F0E431FC25C1100FD4064 /* ELFetchServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELFetchServices.swift; sourceTree = "<group>"; };
 		E27F0E461FC2613700FD4064 /* ELCharacterProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELCharacterProfile.swift; sourceTree = "<group>"; };
 		E27F0E491FC2682600FD4064 /* ELListCollectionViewController+DelegateMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ELListCollectionViewController+DelegateMethods.swift"; sourceTree = "<group>"; };
@@ -41,10 +58,17 @@
 		E2A13F981FC88FE200780505 /* ELGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELGridFlowLayout.swift; sourceTree = "<group>"; };
 		E2A13F9A1FC8A06000780505 /* ELListFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELListFlowLayout.swift; sourceTree = "<group>"; };
 		E2A13F9C1FC8C71800780505 /* selfie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = selfie.png; path = Assets.xcassets/selfie.png; sourceTree = "<group>"; };
-		E2A13F9F1FC93C6C00780505 /* ELSimpsonsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELSimpsonsConstants.swift; sourceTree = "<group>"; };
+		E2A13F9F1FC93C6C00780505 /* ELCharCharGoConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELCharCharGoConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E2548DD31FCBE3C300D265BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E27F0E281FC0E12700FD4064 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,7 +90,8 @@
 		E27F0E2C1FC0E12700FD4064 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E27F0E2B1FC0E12700FD4064 /* CharCharGo.app */,
+				E27F0E2B1FC0E12700FD4064 /* SimpsonsCharacters.app */,
+				E2548DDC1FCBE3C300D265BF /* SeinfeldCharacters.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,8 +99,8 @@
 		E27F0E2D1FC0E12700FD4064 /* CharCharGo */ = {
 			isa = PBXGroup;
 			children = (
-				E2A13F9E1FC93C4600780505 /* Target Constants */,
 				E27F0E2E1FC0E12700FD4064 /* ELAppDelegate.swift */,
+				E2A13F9E1FC93C4600780505 /* Target Constants */,
 				E27F0E451FC2610D00FD4064 /* Models */,
 				E27F0E421FC25AFA00FD4064 /* Networking */,
 				E27F0E481FC2662C00FD4064 /* ListViewController */,
@@ -84,7 +109,8 @@
 				E27F0E371FC0E12700FD4064 /* Assets.xcassets */,
 				E27F0E391FC0E12700FD4064 /* LaunchScreen.storyboard */,
 				E2A13F9C1FC8C71800780505 /* selfie.png */,
-				E27F0E3C1FC0E12700FD4064 /* Info.plist */,
+				E27F0E3C1FC0E12700FD4064 /* CharCharSimpsonsInfo.plist */,
+				E2548DDD1FCBE3C300D265BF /* CharCharSeinfeldInfo.plist */,
 			);
 			path = CharCharGo;
 			sourceTree = "<group>";
@@ -121,7 +147,7 @@
 		E2A13F9E1FC93C4600780505 /* Target Constants */ = {
 			isa = PBXGroup;
 			children = (
-				E2A13F9F1FC93C6C00780505 /* ELSimpsonsConstants.swift */,
+				E2A13F9F1FC93C6C00780505 /* ELCharCharGoConstants.swift */,
 			);
 			path = "Target Constants";
 			sourceTree = "<group>";
@@ -129,9 +155,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E27F0E2A1FC0E12700FD4064 /* CharCharGo */ = {
+		E2548DC61FCBE3C300D265BF /* SeinfeldCharacters */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E27F0E3F1FC0E12700FD4064 /* Build configuration list for PBXNativeTarget "CharCharGo" */;
+			buildConfigurationList = E2548DD91FCBE3C300D265BF /* Build configuration list for PBXNativeTarget "SeinfeldCharacters" */;
+			buildPhases = (
+				E2548DC71FCBE3C300D265BF /* Sources */,
+				E2548DD31FCBE3C300D265BF /* Frameworks */,
+				E2548DD41FCBE3C300D265BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SeinfeldCharacters;
+			productName = CharCharGo;
+			productReference = E2548DDC1FCBE3C300D265BF /* SeinfeldCharacters.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E27F0E2A1FC0E12700FD4064 /* SimpsonsCharacters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E27F0E3F1FC0E12700FD4064 /* Build configuration list for PBXNativeTarget "SimpsonsCharacters" */;
 			buildPhases = (
 				E27F0E271FC0E12700FD4064 /* Sources */,
 				E27F0E281FC0E12700FD4064 /* Frameworks */,
@@ -141,9 +184,9 @@
 			);
 			dependencies = (
 			);
-			name = CharCharGo;
+			name = SimpsonsCharacters;
 			productName = CharCharGo;
-			productReference = E27F0E2B1FC0E12700FD4064 /* CharCharGo.app */;
+			productReference = E27F0E2B1FC0E12700FD4064 /* SimpsonsCharacters.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -156,6 +199,9 @@
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = Ruckt;
 				TargetAttributes = {
+					E2548DC61FCBE3C300D265BF = {
+						ProvisioningStyle = Automatic;
+					};
 					E27F0E2A1FC0E12700FD4064 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
@@ -175,12 +221,24 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E27F0E2A1FC0E12700FD4064 /* CharCharGo */,
+				E27F0E2A1FC0E12700FD4064 /* SimpsonsCharacters */,
+				E2548DC61FCBE3C300D265BF /* SeinfeldCharacters */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E2548DD41FCBE3C300D265BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2548DD51FCBE3C300D265BF /* LaunchScreen.storyboard in Resources */,
+				E2548DD61FCBE3C300D265BF /* selfie.png in Resources */,
+				E2548DD71FCBE3C300D265BF /* Assets.xcassets in Resources */,
+				E2548DD81FCBE3C300D265BF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E27F0E291FC0E12700FD4064 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,11 +253,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E2548DC71FCBE3C300D265BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2548DC81FCBE3C300D265BF /* ELCharCharGoConstants.swift in Sources */,
+				E2548DC91FCBE3C300D265BF /* ELListCollectionViewController+DelegateMethods.swift in Sources */,
+				E2548DCA1FCBE3C300D265BF /* ELCharacterDetailViewController.swift in Sources */,
+				E2548DCB1FCBE3C300D265BF /* ELListFlowLayout.swift in Sources */,
+				E2548DCC1FCBE3C300D265BF /* ELCharacterProfile.swift in Sources */,
+				E2548DCD1FCBE3C300D265BF /* ELAppDelegate.swift in Sources */,
+				E2548DCE1FCBE3C300D265BF /* ELListCollectionViewController.swift in Sources */,
+				E2548DCF1FCBE3C300D265BF /* ELNetworkManager.swift in Sources */,
+				E2548DD01FCBE3C300D265BF /* ELGridFlowLayout.swift in Sources */,
+				E2548DD11FCBE3C300D265BF /* ELFetchServices.swift in Sources */,
+				E2548DD21FCBE3C300D265BF /* ELCharacterProfileCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E27F0E271FC0E12700FD4064 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2A13FA01FC93C6C00780505 /* ELSimpsonsConstants.swift in Sources */,
+				E2A13FA01FC93C6C00780505 /* ELCharCharGoConstants.swift in Sources */,
 				E27F0E4A1FC2682600FD4064 /* ELListCollectionViewController+DelegateMethods.swift in Sources */,
 				E27F0E331FC0E12700FD4064 /* ELCharacterDetailViewController.swift in Sources */,
 				E2A13F9B1FC8A06000780505 /* ELListFlowLayout.swift in Sources */,
@@ -235,6 +311,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E2548DDA1FCBE3C300D265BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 266QWC925V;
+				INFOPLIST_FILE = "$(SRCROOT)/CharCharGo/CharCharSeinfeldInfo.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DSEINFELD";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruckt.CharCharSeinfeld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2548DDB1FCBE3C300D265BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 266QWC925V;
+				INFOPLIST_FILE = "$(SRCROOT)/CharCharGo/CharCharSeinfeldInfo.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DSEINFELD";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruckt.CharCharSeinfeld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E27F0E3D1FC0E12700FD4064 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -348,9 +456,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 266QWC925V;
-				INFOPLIST_FILE = CharCharGo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CharCharGo/CharCharSimpsonsInfo.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruckt.CharCharGo;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D SIMPSONS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruckt.CharCharSimpsons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -363,9 +472,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 266QWC925V;
-				INFOPLIST_FILE = CharCharGo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CharCharGo/CharCharSimpsonsInfo.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruckt.CharCharGo;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D SIMPSONS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruckt.CharCharSimpsons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -375,6 +485,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E2548DD91FCBE3C300D265BF /* Build configuration list for PBXNativeTarget "SeinfeldCharacters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2548DDA1FCBE3C300D265BF /* Debug */,
+				E2548DDB1FCBE3C300D265BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E27F0E261FC0E12700FD4064 /* Build configuration list for PBXProject "CharCharGo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -384,7 +503,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E27F0E3F1FC0E12700FD4064 /* Build configuration list for PBXNativeTarget "CharCharGo" */ = {
+		E27F0E3F1FC0E12700FD4064 /* Build configuration list for PBXNativeTarget "SimpsonsCharacters" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E27F0E401FC0E12700FD4064 /* Debug */,

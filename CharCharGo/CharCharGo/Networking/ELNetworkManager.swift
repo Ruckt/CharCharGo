@@ -16,12 +16,7 @@ class ELNetworkManager {
         ELFetchServices().fetchDuckDuckGoCharachtersService {[weak self] (characterProfiles) in
             
             if let characterProfiles = characterProfiles {
-                for profile: ELCharacterProfile in characterProfiles {
-                    print("*******" + profile.name)
-                }
-                
                 self?.requestImageDataForProfiles(characterProfiles, completion: { (imagesArray) in
-                    print("requestImageDataForProfiles closure")
                     completion(imagesArray)
                 })
             } else {
@@ -49,10 +44,7 @@ class ELNetworkManager {
                         
                         let fetchQueue = DispatchQueue(label: "fetchQueue")
                         fetchQueue.sync {
-
                             if let image = image {
-                                print("Name: \(profile.name)")
-                                print("appending image for : \(httpUrl)")
                                 imagesArray.append(ELCharacterProfilelPlusImageData(profile: profile, image: image))
                             }
                         }

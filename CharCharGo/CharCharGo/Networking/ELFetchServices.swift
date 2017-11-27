@@ -13,7 +13,7 @@ class ELFetchServices {
     
     func fetchDuckDuckGoCharachtersService(completion: @escaping (ELCharacterProfileArray?) -> Void) {
         
-        guard let url = URL(string: ELNetworkConstants.kSimpsonCharacterURL) else {
+        guard let url = URL(string: ELCharCharGoConstants.kCHAR_URL) else {
             print("Error: cannot create URL")
             completion(nil)
             return
@@ -21,8 +21,6 @@ class ELFetchServices {
         
         let urlRequest = URLRequest(url: url)
         let session = URLSession.shared
-        
-        print(urlRequest)
         
         let task = session.dataTask(with: urlRequest) { (data, urlResponse, error) in
 
