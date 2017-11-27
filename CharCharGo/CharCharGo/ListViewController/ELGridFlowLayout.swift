@@ -12,7 +12,7 @@ import UIKit
 class ELGridFlowLayout: UICollectionViewFlowLayout {
     
     /// Defining the height of each cell
-    let itemHeight: CGFloat = 120
+    let itemHeight: CGFloat = 150
     
     override init() {
         super.init()

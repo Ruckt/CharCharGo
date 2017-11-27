@@ -14,7 +14,7 @@ class ELListCollectionViewController: UICollectionViewController {
     // UI properties
     @IBOutlet var layoutChangeButton: UIBarButtonItem!
     
-    var detailViewController: DetailViewController? = nil
+    var detailViewController: ELCharacterDetailViewController? = nil
     let gridFlowLayout = ELGridFlowLayout()
     let listFlowLayout = ELListFlowLayout()
     @objc dynamic var isGridLayout: Bool = true
@@ -41,15 +41,13 @@ class ELListCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view, typically from a nib.
-        navigationItem.leftBarButtonItem = editButtonItem
         
-//        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
-//        navigationItem.rightBarButtonItem = addButton
+        self.title = "Simpsons Character Viewer"
+        
         if let split = splitViewController {
             let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? ELCharacterDetailViewController
+            split.preferredDisplayMode = .allVisible
         }
         
         collectionView!.collectionViewLayout = gridFlowLayout
@@ -77,6 +75,17 @@ class ELListCollectionViewController: UICollectionViewController {
                 if self?.activityIndicator.isAnimating == true {
                     self?.activityIndicator.stopAnimating()
                     self?.activityIndicator.removeFromSuperview()
+                }
+                
+                // For split views, reload displayed detail view controller with first profile in data array
+                if let split = self?.splitViewController,
+                    let characterProfiles = characterProfiles,
+                    characterProfiles.count > 0 {
+                    
+                        let controllers = split.viewControllers
+                        self?.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? ELCharacterDetailViewController
+                        self?.detailViewController?.characterProfile = characterProfiles[0]
+                        self?.detailViewController?.configureView()
                 }
                 
                 self?.collectionView?.reloadData()
@@ -109,13 +118,16 @@ class ELListCollectionViewController: UICollectionViewController {
     // MARK: - Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
-            //            if let indexPath = tableView.indexPathForSelectedRow {
-            //                let object = objects[indexPath.row] as! NSDate
-            //                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-            //                controller.detailItem = object
-            //                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-            //                controller.navigationItem.leftItemsSupplementBackButton = true
+        if segue.identifier == "showFullCharacter",
+            let cell = sender as? ELCharacterProfileCollectionViewCell,
+            let indexPath =  self.collectionView?.indexPath(for: cell),
+            let controller = (segue.destination as? UINavigationController)?.topViewController as? ELCharacterDetailViewController {
+            
+            let profile = self.characterProfileWithImagesArray[indexPath.row] as ELCharacterProfilelPlusImageData
+            controller.characterProfile = profile
+            
+            controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+            controller.navigationItem.leftItemsSupplementBackButton = true
         }
     }
 }

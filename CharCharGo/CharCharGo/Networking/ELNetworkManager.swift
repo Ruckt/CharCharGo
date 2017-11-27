@@ -33,7 +33,9 @@ class ELNetworkManager {
     private func requestImageDataForProfiles(_ profileArray: ELCharacterProfileArray, completion: @escaping(_ profileImages: ELCharacterProfilelPlusImageDataArray) -> Void) {
 
         var imagesArray = ELCharacterProfilelPlusImageDataArray()
+        imagesArray.reserveCapacity(profileArray.count)
         var nonImageArray = ELCharacterProfilelPlusImageDataArray()
+        nonImageArray.reserveCapacity(profileArray.count)
 
         let downloadGroup = DispatchGroup()
         let queue = DispatchQueue(label: "requestImageData")
