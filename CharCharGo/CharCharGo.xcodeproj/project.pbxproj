@@ -33,14 +33,14 @@
 		E27F0E501FC2871D00FD4064 /* ELNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F0E4F1FC2871D00FD4064 /* ELNetworkManager.swift */; };
 		E2A13F9D1FC8C71900780505 /* selfie.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A13F9C1FC8C71800780505 /* selfie.png */; };
 		E2A13FA01FC93C6C00780505 /* ELCharCharGoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A13F9F1FC93C6C00780505 /* ELCharCharGoConstants.swift */; };
-		E2B92BCC204BB24600D99ADC /* CommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B92BCB204BB24600D99ADC /* CommonTests.swift */; };
 		E2B92BD4204CCDCE00D99ADC /* ELGridOrListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B92BD3204CCDCE00D99ADC /* ELGridOrListLayout.swift */; };
 		E2B92BD5204CCDCE00D99ADC /* ELGridOrListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B92BD3204CCDCE00D99ADC /* ELGridOrListLayout.swift */; };
-		E2B92BD6204CCDCE00D99ADC /* ELGridOrListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B92BD3204CCDCE00D99ADC /* ELGridOrListLayout.swift */; };
+		E2B92BDE204CE0FE00D99ADC /* SimpsonsCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B92BDD204CE0FE00D99ADC /* SimpsonsCharactersTests.swift */; };
+		E2B92BE6204CE1BF00D99ADC /* ELCharCharGoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A13F9F1FC93C6C00780505 /* ELCharCharGoConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E2B92BCE204BB24600D99ADC /* PBXContainerItemProxy */ = {
+		E2B92BE0204CE0FE00D99ADC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E27F0E231FC0E12700FD4064 /* Project object */;
 			proxyType = 1;
@@ -69,10 +69,10 @@
 		E2A13F9F1FC93C6C00780505 /* ELCharCharGoConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELCharCharGoConstants.swift; sourceTree = "<group>"; };
 		E2B92BBF204BB21900D99ADC /* SimpsonsCharactersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsCharactersTests.swift; sourceTree = "<group>"; };
 		E2B92BC1204BB21900D99ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2B92BC9204BB24600D99ADC /* CommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2B92BCB204BB24600D99ADC /* CommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTests.swift; sourceTree = "<group>"; };
-		E2B92BCD204BB24600D99ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2B92BD3204CCDCE00D99ADC /* ELGridOrListLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ELGridOrListLayout.swift; sourceTree = "<group>"; };
+		E2B92BDB204CE0FE00D99ADC /* SimpsonsCharactersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpsonsCharactersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2B92BDD204CE0FE00D99ADC /* SimpsonsCharactersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsCharactersTests.swift; sourceTree = "<group>"; };
+		E2B92BDF204CE0FE00D99ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E2B92BC6204BB24600D99ADC /* Frameworks */ = {
+		E2B92BD8204CE0FE00D99ADC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -106,6 +106,7 @@
 				E27F0E2D1FC0E12700FD4064 /* CharCharGo */,
 				E2B92BBE204BB21900D99ADC /* SimpsonsCharactersTests */,
 				E2B92BCA204BB24600D99ADC /* CommonTests */,
+				E2B92BDC204CE0FE00D99ADC /* SimpsonsCharactersTests */,
 				E27F0E2C1FC0E12700FD4064 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,7 +116,7 @@
 			children = (
 				E27F0E2B1FC0E12700FD4064 /* SimpsonsCharacters.app */,
 				E2548DDC1FCBE3C300D265BF /* SeinfeldCharacters.app */,
-				E2B92BC9204BB24600D99ADC /* CommonTests.xctest */,
+				E2B92BDB204CE0FE00D99ADC /* SimpsonsCharactersTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,10 +188,17 @@
 		E2B92BCA204BB24600D99ADC /* CommonTests */ = {
 			isa = PBXGroup;
 			children = (
-				E2B92BCB204BB24600D99ADC /* CommonTests.swift */,
-				E2B92BCD204BB24600D99ADC /* Info.plist */,
 			);
 			path = CommonTests;
+			sourceTree = "<group>";
+		};
+		E2B92BDC204CE0FE00D99ADC /* SimpsonsCharactersTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2B92BDD204CE0FE00D99ADC /* SimpsonsCharactersTests.swift */,
+				E2B92BDF204CE0FE00D99ADC /* Info.plist */,
+			);
+			path = SimpsonsCharactersTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,22 +238,22 @@
 			productReference = E27F0E2B1FC0E12700FD4064 /* SimpsonsCharacters.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E2B92BC8204BB24600D99ADC /* CommonTests */ = {
+		E2B92BDA204CE0FE00D99ADC /* SimpsonsCharactersTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E2B92BD0204BB24600D99ADC /* Build configuration list for PBXNativeTarget "CommonTests" */;
+			buildConfigurationList = E2B92BE2204CE0FE00D99ADC /* Build configuration list for PBXNativeTarget "SimpsonsCharactersTests" */;
 			buildPhases = (
-				E2B92BC5204BB24600D99ADC /* Sources */,
-				E2B92BC6204BB24600D99ADC /* Frameworks */,
-				E2B92BC7204BB24600D99ADC /* Resources */,
+				E2B92BD7204CE0FE00D99ADC /* Sources */,
+				E2B92BD8204CE0FE00D99ADC /* Frameworks */,
+				E2B92BD9204CE0FE00D99ADC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E2B92BCF204BB24600D99ADC /* PBXTargetDependency */,
+				E2B92BE1204CE0FE00D99ADC /* PBXTargetDependency */,
 			);
-			name = CommonTests;
-			productName = CommonTests;
-			productReference = E2B92BC9204BB24600D99ADC /* CommonTests.xctest */;
+			name = SimpsonsCharactersTests;
+			productName = SimpsonsCharactersTests;
+			productReference = E2B92BDB204CE0FE00D99ADC /* SimpsonsCharactersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -265,7 +273,7 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
-					E2B92BC8204BB24600D99ADC = {
+					E2B92BDA204CE0FE00D99ADC = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E27F0E2A1FC0E12700FD4064;
@@ -287,7 +295,7 @@
 			targets = (
 				E27F0E2A1FC0E12700FD4064 /* SimpsonsCharacters */,
 				E2548DC61FCBE3C300D265BF /* SeinfeldCharacters */,
-				E2B92BC8204BB24600D99ADC /* CommonTests */,
+				E2B92BDA204CE0FE00D99ADC /* SimpsonsCharactersTests */,
 			);
 		};
 /* End PBXProject section */
@@ -315,7 +323,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E2B92BC7204BB24600D99ADC /* Resources */ = {
+		E2B92BD9204CE0FE00D99ADC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,22 +367,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E2B92BC5204BB24600D99ADC /* Sources */ = {
+		E2B92BD7204CE0FE00D99ADC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2B92BCC204BB24600D99ADC /* CommonTests.swift in Sources */,
-				E2B92BD6204CCDCE00D99ADC /* ELGridOrListLayout.swift in Sources */,
+				E2B92BE6204CE1BF00D99ADC /* ELCharCharGoConstants.swift in Sources */,
+				E2B92BDE204CE0FE00D99ADC /* SimpsonsCharactersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E2B92BCF204BB24600D99ADC /* PBXTargetDependency */ = {
+		E2B92BE1204CE0FE00D99ADC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E27F0E2A1FC0E12700FD4064 /* SimpsonsCharacters */;
-			targetProxy = E2B92BCE204BB24600D99ADC /* PBXContainerItemProxy */;
+			targetProxy = E2B92BE0204CE0FE00D99ADC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -569,17 +577,17 @@
 			};
 			name = Release;
 		};
-		E2B92BD1204BB24600D99ADC /* Debug */ = {
+		E2B92BE3204CE0FE00D99ADC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				"BUNDLE_LOADER[arch=*]" = "$(BUNDLE_LOADER)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 266QWC925V;
-				INFOPLIST_FILE = CommonTests/Info.plist;
+				INFOPLIST_FILE = SimpsonsCharactersTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruckt.CommonTests;
+				NEW_SETTING = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruckt.SimpsonsCharactersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -587,22 +595,130 @@
 			};
 			name = Debug;
 		};
-		E2B92BD2204BB24600D99ADC /* Release */ = {
+		E2B92BE4204CE0FE00D99ADC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 266QWC925V;
-				INFOPLIST_FILE = CommonTests/Info.plist;
+				INFOPLIST_FILE = SimpsonsCharactersTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruckt.CommonTests;
+				NEW_SETTING = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruckt.SimpsonsCharactersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpsonsCharacters.app/SimpsonsCharacters";
 			};
 			name = Release;
+		};
+		E2B92BE7204CE8E100D99ADC /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "-DTESTING";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Testing;
+		};
+		E2B92BE8204CE8E100D99ADC /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 266QWC925V;
+				INFOPLIST_FILE = "$(SRCROOT)/CharCharGo/CharCharSimpsonsInfo.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D SIMPSONS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruckt.CharCharSimpsons;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Testing;
+		};
+		E2B92BE9204CE8E100D99ADC /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 266QWC925V;
+				INFOPLIST_FILE = "$(SRCROOT)/CharCharGo/CharCharSeinfeldInfo.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DSEINFELD";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruckt.CharCharSeinfeld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Testing;
+		};
+		E2B92BEB204CE8E100D99ADC /* Testing */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 266QWC925V;
+				INFOPLIST_FILE = SimpsonsCharactersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				NEW_SETTING = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruckt.SimpsonsCharactersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpsonsCharacters.app/SimpsonsCharacters";
+			};
+			name = Testing;
 		};
 /* End XCBuildConfiguration section */
 
@@ -611,6 +727,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E2548DDA1FCBE3C300D265BF /* Debug */,
+				E2B92BE9204CE8E100D99ADC /* Testing */,
 				E2548DDB1FCBE3C300D265BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -620,6 +737,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E27F0E3D1FC0E12700FD4064 /* Debug */,
+				E2B92BE7204CE8E100D99ADC /* Testing */,
 				E27F0E3E1FC0E12700FD4064 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -629,16 +747,18 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E27F0E401FC0E12700FD4064 /* Debug */,
+				E2B92BE8204CE8E100D99ADC /* Testing */,
 				E27F0E411FC0E12700FD4064 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E2B92BD0204BB24600D99ADC /* Build configuration list for PBXNativeTarget "CommonTests" */ = {
+		E2B92BE2204CE0FE00D99ADC /* Build configuration list for PBXNativeTarget "SimpsonsCharactersTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E2B92BD1204BB24600D99ADC /* Debug */,
-				E2B92BD2204BB24600D99ADC /* Release */,
+				E2B92BE3204CE0FE00D99ADC /* Debug */,
+				E2B92BEB204CE8E100D99ADC /* Testing */,
+				E2B92BE4204CE0FE00D99ADC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

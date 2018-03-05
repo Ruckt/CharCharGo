@@ -2,7 +2,7 @@
 //  SimpsonsCharactersTests.swift
 //  SimpsonsCharactersTests
 //
-//  Created by Edan Lichtenstein on 3/3/18.
+//  Created by Edan Lichtenstein on 3/4/18.
 //  Copyright © 2018 Ruckt. All rights reserved.
 //
 
@@ -10,26 +10,34 @@ import XCTest
 
 class SimpsonsCharactersTests: XCTestCase {
     
+    var sessionUnderTest: URLSession!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sessionUnderTest = URLSession(configuration: URLSessionConfiguration.default)
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sessionUnderTest = nil
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testCallToDuckDuckGoCompletes() {
+        let url = URL(string: "https://api.duckduckgo.com/?q=simpsons+characters&format=json")
+
+        let promise = expectation(description: "Completion handler invoked")
+        var statusCode: Int?
+        var responseError: Error?
+        
+        let dataTask = sessionUnderTest.dataTask(with: url!) { data, response, error in
+            statusCode = (response as? HTTPURLResponse)?.statusCode
+            responseError = error
+            promise.fulfill()
         }
+        dataTask.resume()
+        waitForExpectations(timeout: 5, handler: nil)
+        
+        XCTAssertNil(responseError)
+        XCTAssertEqual(statusCode, 200)
     }
-    
 }
