@@ -9,10 +9,15 @@
 import Foundation
 import UIKit
 
-class ELGridFlowLayout: UICollectionViewFlowLayout {
+class ELGridOrListLayout: UICollectionViewFlowLayout {
     
-    /// Defining the height of each cell
-    let itemHeight: CGFloat = 150
+    var isGridLayout = true
+    
+    var itemHeight: CGFloat {
+        get {
+            return (self.isGridLayout ? 150 : 70)
+        }
+    }
     
     override init() {
         super.init()
@@ -26,16 +31,26 @@ class ELGridFlowLayout: UICollectionViewFlowLayout {
     
     /// Sets up the layout for the collectionView. 1pt distance between each cell and 1pt distance between each row plus use a vertical layout
     func setupLayout() {
-        minimumInteritemSpacing = 1
+        if isGridLayout {
+            minimumInteritemSpacing = 1
+        } else {
+            minimumInteritemSpacing = 0
+        }
         minimumLineSpacing = 1
         scrollDirection = .vertical
     }
-    
-    /// Here the number of colums is definedd
+
     func itemWidth() -> CGFloat {
         guard let width = collectionView?.frame.width else { return 50.0}
-        let columns : CGFloat = 3
-        return (width/columns)-1
+        
+        if isGridLayout {
+            let columns : CGFloat = 3
+            return (width/columns)-1
+        } else {
+            guard let width = collectionView?.frame.width else { return 50.0}
+            return width
+
+        }
     }
     
     override var itemSize: CGSize {

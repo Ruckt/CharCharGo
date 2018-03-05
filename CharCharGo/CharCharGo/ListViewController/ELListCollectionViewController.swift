@@ -15,8 +15,9 @@ class ELListCollectionViewController: UICollectionViewController {
     @IBOutlet var layoutChangeButton: UIBarButtonItem!
     
     var detailViewController: ELCharacterDetailViewController? = nil
-    let gridFlowLayout = ELGridFlowLayout()
-    let listFlowLayout = ELListFlowLayout()
+    var gridFlowLayout = ELGridOrListLayout()
+    var listFlowLayout = ELGridOrListLayout()
+    
     @objc dynamic var isGridLayout: Bool = true
     
     // Data properties
@@ -43,6 +44,8 @@ class ELListCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         self.title = ELCharCharGoConstants.kAPP_TITLE
+        self.gridFlowLayout.isGridLayout = true
+        self.listFlowLayout.isGridLayout = false
         
         if let split = splitViewController {
             let controllers = split.viewControllers
@@ -100,17 +103,15 @@ class ELListCollectionViewController: UICollectionViewController {
         
         self.isGridLayout = !self.isGridLayout
         
-        if collectionView.collectionViewLayout == gridFlowLayout {
-            UIView.animate(withDuration: 0.2) { () -> Void in
-                collectionView.collectionViewLayout.invalidateLayout()
-                collectionView.setCollectionViewLayout(self.listFlowLayout, animated: true)
-                self.layoutChangeButton.title = "To Grid"
-            }
-        } else {
-            UIView.animate(withDuration: 0.2) { () -> Void in
-                collectionView.collectionViewLayout.invalidateLayout()
+        UIView.animate(withDuration: 0.2) { () -> Void in
+            collectionView.collectionViewLayout.invalidateLayout()
+            
+            if self.isGridLayout {
                 collectionView.setCollectionViewLayout(self.gridFlowLayout, animated: true)
                 self.layoutChangeButton.title = "To List"
+            } else {
+                collectionView.setCollectionViewLayout(self.listFlowLayout, animated: true)
+                self.layoutChangeButton.title = "To Grid"
             }
         }
     }
